@@ -1,0 +1,47 @@
+/* Bitwise Operators */
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdbool.h> 
+//Complete the following function.
+
+
+void calculate_the_maximum(int n, int k) {
+
+    int and=0,or=0,xor=0;
+
+  //Write your code here.
+  for(int i=1; i<=n; i++){
+      for (int j=i; j<n; j++) {
+          int a = i, b = j+1;
+
+            int and1 = a & b;
+            int or1 = a | b;
+            int xor1 = a ^ b;
+
+            if (and1 > and && and1 < k) {
+                and = and1;
+            }
+            if (or1 > or && or1 < k) {
+                or = or1;
+            }
+            if (xor1 > xor && xor1 < k) {
+                xor = xor1;
+            }
+      }
+  }
+
+  printf("%d\n%d\n%d",and,or,xor);
+}
+
+int main() {
+    int n, k;
+  
+    scanf("%d %d", &n, &k);
+    calculate_the_maximum(n, k);
+ 
+    return 0;
+}
