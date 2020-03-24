@@ -1,0 +1,29 @@
+/* Playing With Characters */
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    char line1[100], line2[100], line3[200];
+    scanf("%c",line1);
+    scanf("\n");
+    scanf("%s",line2);
+    scanf("\n");
+    gets(line3);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+
+    printf("%s",line1);
+    printf("\n");
+    printf("%s",line2);
+    printf("\n");
+    printf("%s",line3);
+
+    return 0;
+}
+
+
